@@ -1,0 +1,20 @@
+<a [routerLink]="['/dashboard']">Home</a>
+<a [routerLink]="['/show/1']">Go to Back to Question</a>
+<a href="#">LogOut</a>
+<div class="question">
+  <h1>{{currentQuestion.title}}</h1>
+  <h4>{{currentQuestion.description}}</h4>
+  <form (submit)= "createAnswer()">
+    <label for="">Your Answer:</label>
+    <textarea
+    name="content"
+    rows="8" cols="80"
+    required
+    [(ngModel)]= "newAnswer.content"
+    minlength="10"></textarea>
+     <label for="">Suporting Details for your answer (Optional)</label>
+     <textarea name="details" rows="8" cols="80" [(ngModel)]= "newAnswer.details"></textarea>
+      <button   (click)= "cancel()" type="button" name="button">Cancel</button>
+      <button type="submit" name="button">Submit</button>
+  </form>
+</div>

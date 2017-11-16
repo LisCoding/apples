@@ -1,0 +1,22 @@
+<a  [routerLink]="['/dashboard']">Home</a>
+<a  [routerLink]="['/answer/1']">Anwser this Question</a>
+<a href="#">LogOut</a>
+<h1>{{currentQuestion.title}}</h1>
+<h4>{{currentQuestion.description}}</h4>
+<table  width=600>
+  <thead>
+    <th></th>
+    <th></th>
+  </thead>
+  <tbody>
+    <tr *ngFor= "let a of answers">
+      <p></p>
+      <td>
+        <h6>{{a.author}}</h6>
+        <h5>{{a.content}}</h5>
+        <span>{{a.details}}</span>
+      </td>
+      <td>{{a.likes}} likes <button type="button" name="button">Like!</button></td>
+    </tr>
+  </tbody>
+</table>
